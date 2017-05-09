@@ -1,0 +1,222 @@
+//字体图标路径
+$ionicons-font-path: "../fonts" !default;
+$ionicons-font-family: "Ionicons" !default;
+$ionicons-version: "2.0.1" !default;
+$ionicons-prefix: ion- !default;
+
+//*//////   基准font-size  ////////*/
+$baseFontSize: 10!default;
+
+//*//////  左右留白宽度  ////////*/
+$emptyWidth: 12rem / $baseFontSize;
+
+//*//////  颜色值   ////////*/
+$priColor: #008eec!default;//*主色*/
+$mainColor: #333!default;//*主黑色*/
+$fc_a:#3879D9;//链接蓝色
+
+$priGreen:#017A32;//主绿色
+$fcRed:#f02e4a;//红色
+$orange:#ff8c31;//橙色
+$fcGreen:#16A40A;//绿色
+
+$yellowWarn:#FFF500;//黄色警告
+$redWarn:#FF0000;//黄色警告
+
+$blue:#258bfd;
+$white: #fff;//*白色*/
+$bgBody: #f8f8f8;
+$fcGray: #ababab!default;//*小标题灰色*/
+$mainBgColor:#fafafa;
+
+$iconColor:#aaa;//图标颜色
+$iconHighlightColor:#FF813B;//图标高亮颜色
+
+$titleColor:#333;
+$subTitColor:#aaa;
+$conColor:#888;
+
+@mixin listTit{
+    color: $priGreen;
+    font-size: 15rem / $baseFontSize;
+}
+@mixin articleTit{  //新闻详情标题
+    color: $priGreen;
+    font-size: 17rem / $baseFontSize;
+    font-weight: 600;
+    line-height:120%;
+    margin: 10rem / $baseFontSize 0;
+}
+@mixin articleRelease{//新闻发布时间
+    color: #9B9B9B;
+    font-size: 13rem / $baseFontSize;
+    font-weight: normal;
+}
+@mixin overflowEllipsis {
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+@mixin highlight{
+  text-decoration: underline;
+  color: #ff8c31;
+}
+
+@mixin bigListTit{
+  color: $mainColor;
+  font-size: 16rem / $baseFontSize;
+}
+@mixin normalArticleTit{  //详情标题
+    color: $mainColor;
+    font-size: 17rem / $baseFontSize;
+    font-weight: 600;
+    line-height:120%;
+    margin: 10rem / $baseFontSize 0;
+}
+
+
+//* item*/
+//* --------------------------*/
+$mainTitleImgW:30rem / $baseFontSize;//first of image width
+$itemCircleImgW:30rem / $baseFontSize;//头像图片大小
+$plateImgW: 30rem / $baseFontSize;//板块图像大小
+
+$imgSpacingR:12rem / $baseFontSize;//头像图片与文字间距
+
+$postListPicH:100rem / $baseFontSize;//帖子图片高度
+
+//*边框*/
+$borColor: #EFF2EF;//*边框颜色*/
+$darkenBorColor:darken($borColor,10%);
+$borRadius: 4rem / $baseFontSize;//*圆角大小*/
+$blueBor:#78CDF8;
+
+//footer
+$footBarH:40rem / $baseFontSize;
+
+//弹出层
+$popRadius:5rem / $baseFontSize;
+$popBg:#f0f0f0;
+$popBorColor:darken($popBg,10%);
+
+
+
+@mixin border-box
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+@mixin flex1
+{
+   -webkit-flex: 1;
+      -moz-flex: 1;
+       -ms-flex: 1;
+        -o-flex: 1;
+           flex: 1;
+}
+@mixin flex
+{
+    display: -webkit-flex;
+    display:         flex;
+}
+@mixin clear{
+    font-size: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+}
+@mixin translate50{
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+@mixin rotate($deg){
+  -webkit-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+@mixin shadow($shadow){
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin arrow{
+  content:'';
+  position: absolute;
+  width:0;
+  height:0;
+}
+
+//1px 解决方案
+@mixin scaleBottom {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+@mixin scaleTop {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+@mixin scaleRight {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  border-right: 1px solid #D9D9D9;
+  color: #D9D9D9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+//垂直居中对齐
+@mixin verticalMiddle {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// 带阴影的列表项
+@mixin liWrap($marginBottom:0, $borderRadius:0) {
+  margin-bottom: $marginBottom;
+  border-radius: $borderRadius;
+  background-color: $white;
+}
+// 列表头
+@mixin liHead ($color: #eefbf2){
+  position: relative;
+  height: 53rem / $baseFontSize;
+  line-height: 53rem / $baseFontSize;
+  background-color: $color;
+  color: $mainColor;
+  @extend .ft16;
+}

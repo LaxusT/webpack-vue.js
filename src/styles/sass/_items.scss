@@ -1,0 +1,127 @@
+.item{
+	li{
+		background: #fff;
+		border-bottom: 1px solid $borColor;
+		padding:10rem / $baseFontSize 20rem / $baseFontSize;
+
+		&.has_right_arrow{
+			position: relative;
+
+			&:before{
+				position: absolute;
+				right:$emptyWidth;
+				color:$iconColor;
+				font-size: 20rem / $baseFontSize;
+			}
+		}
+
+		&+li{
+			border-top: 1px solid $borColor;
+			margin-top: 10rem / $baseFontSize;
+		}
+
+		h3{
+			@include listTit;
+			padding-left: 5rem / $baseFontSize;
+		}
+		.con{
+			$bg:#F0F5EF;
+			position: relative;
+			background: $bg;
+			padding:$emptyWidth;
+			color:$mainColor;
+			margin-top: 20rem / 2 / $baseFontSize;
+			font-size:13rem / $baseFontSize;
+
+			&:before{
+				content:"";
+				top:-18rem / $baseFontSize;
+				left:20rem / $baseFontSize;
+				position: absolute;
+
+				border: 12rem / $baseFontSize solid transparent;
+				border-bottom: 8rem / $baseFontSize solid $bg;
+
+
+			}
+			&:after{
+				content:"";
+				@include clear;
+			}
+
+			img{
+				float:right;
+				width:175rem / 2 / $baseFontSize;
+				height:152rem / 2 / $baseFontSize;
+				margin-left: 5rem / $baseFontSize;
+			}
+		}
+		.footer{
+			color:#a3a3a3;
+			padding-top: 10rem / $baseFontSize;
+			padding:10rem / $baseFontSize 5rem / $baseFontSize 0;
+			font-size:12rem / $baseFontSize;
+		}
+
+		.ion{
+			font-size: 20rem / $baseFontSize;
+			color: $iconColor;
+			margin-right: 5rem / $baseFontSize;
+			vertical-align: middle;
+		}
+		.time{
+			float:right;
+		}
+
+	}
+}
+.items{
+	background:#fff;
+	box-shadow:0 0 3px #dfe4de;
+
+	.items_tit{
+		border-bottom:1px solid $borColor;
+		padding:10rem / $baseFontSize $emptyWidth;
+		font-size:14rem / $baseFontSize;
+	}
+
+	li{
+		position: relative;
+		padding:10rem / $baseFontSize $emptyWidth;
+		font-size: 14rem / $baseFontSize;
+		color:$mainColor;
+
+		.content{
+			display:inline-block;
+			width:70%;
+			white-space:nowrap;
+		    overflow:hidden;
+		    text-overflow:ellipsis
+		}
+
+		&.has_right_arrow:before{
+			position: absolute;
+			right:$emptyWidth;
+			color:$iconColor;
+			font-size: 20rem / $baseFontSize;
+
+		}
+		&.has_right_attach{
+			position: relative;
+
+			.attach{
+				position: absolute;
+				// top:10rem / $baseFontSize + 2rem / $baseFontSize;
+				top:50%;
+				transform:translateY(-50%);
+				right:$emptyWidth+ 10rem / $baseFontSize;
+				font-size: 12rem / $baseFontSize;
+				color:#aaa;
+			}
+		}
+		&+li{
+			border-top:1px solid $borColor;
+		}
+	}
+
+}

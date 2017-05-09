@@ -1,0 +1,394 @@
+////////////////////////////////////////////////*  base css *////////////////////////////////////////////////
+html, body, #app {
+  height: 100%;
+}
+body {
+  font-size: 14rem / $baseFontSize;
+  font-family: 'Microsoft YaHei', Arial !important;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* * * * * * * * * * *   定位   * * * * * * * * * * */
+.text-align {
+  @at-root .text_left {
+    text-align: left !important;
+  }
+  @at-root .text_center {
+    text-align: center !important;
+  }
+  @at-root .text_right {
+    text-align: right !important;
+  }
+}
+
+.bc {
+  margin: 0 auto;
+}
+
+.float {
+  @at-root .fl_left {
+    float: left;
+    display: inline;
+  }
+  @at-root .fl_right {
+    float: right;
+    display: inline;
+  }
+}
+
+.clear {
+  @at-root .clearFix:after {
+    @include clear;
+    content: "";
+  }
+  @at-root .clearFix {
+    *zoom: 1;
+  }
+  @at-root .clear_b {
+    clear: both;
+    height: 0 !important;
+    line-height: 0 !important;
+    font-size: 0;
+  }
+  @at-root .clear_l {
+    clear: left;
+  }
+  @at-root .clear_r {
+    clear: right;
+  }
+}
+
+.vertical-align {
+  @at-root .vm {
+    vertical-align: middle;
+  }
+  @at-root .vt {
+    vertical-align: top;
+  }
+}
+
+.position {
+  @at-root .pos_r {
+    position: relative;
+  }
+  @at-root .pos_a {
+    position: absolute;
+  }
+  @at-root .pos_f {
+    position: fixed;
+  }
+  @at-root .abs_right {
+    position: absolute;
+    right: 0;
+  }
+  @at-root .abs_right_bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  @at-root .zoom {
+    zoom: 1;
+  }
+}
+
+.display {
+  @at-root .hidden {
+    visibility: hidden;
+  }
+  @at-root .hide {
+    display: none;
+  }
+  @at-root .show {
+    display: block
+  }
+}
+
+/* * * * * * * * * * *   字体   * * * * * * * * * * */
+//字体大小
+.font {
+  @at-root .fwb {
+    font-weight: bold;
+  }
+
+  @at-root .ft0 {
+    font-size: 0 !important;
+  }
+  @at-root .ft10 {
+    font-size: 10rem / $baseFontSize !important;
+  }
+  @at-root .ft12 {
+    font-size: 12rem / $baseFontSize !important;
+  }
+  @at-root .ft13 {
+    font-size: 13rem / $baseFontSize !important;
+  }
+  @at-root .ft14 {
+    font-size: 14rem / $baseFontSize !important;
+  }
+  @at-root .ft15 {
+    font-size: 15rem / $baseFontSize !important;
+  }
+  @at-root .ft16 {
+    font-size: 16rem / $baseFontSize !important;
+  }
+  @at-root .ft20 {
+    font-size: 20rem / $baseFontSize !important;
+  }
+  @at-root .ft22 {
+    font-size: 22rem / $baseFontSize !important;
+  }
+  @at-root  .ft24 {
+    font-size: 24rem / $baseFontSize !important;
+  }
+  @at-root  .ft40 {
+    font-size: 40rem / $baseFontSize !important;
+  }
+}
+
+//*字体颜色*/
+.font_color {
+  @at-root .fc_primary {
+    color: $priColor !important;
+  }
+  @at-root .fc_main {
+    color: $mainColor !important;
+  }
+  @at-root .fc_a {
+    color: #008EEC;
+  }
+
+  @at-root .fc_orange {
+    color: $orange !important;
+  }
+  @at-root .fc_gray {
+    color: $fcGray !important;
+  }
+  @at-root .fc_red {
+    color: $fcRed !important;
+  }
+  @at-root .fc_green {
+    color: $fcGreen !important;
+  }
+  @at-root .fc_highlight {
+    @include highlight
+  }
+
+}
+
+//*背景色*/
+.bg_color {
+  //@at-root .bg_orange { background-color: $orange !important; }
+  @at-root .bg_white {
+    background-color: $white !important;
+  }
+  //@at-root .bg_content{
+  //  background-color: $bgContent!important;
+  //}
+}
+
+/* * * * * * * * * * *   间距   * * * * * * * * * * */
+//行高
+.line-height {
+  //@at-root .line_height16 { line-height: 16rem / $baseFontSize; }
+  //@at-root .line_height20 { line-height: 20rem / $baseFontSize; }
+  //@at-root .line_height21 { line-height: 21rem / $baseFontSize; }
+  @at-root .line_height200 { line-height: 200%; }
+}
+
+//定位值
+.position-value {
+  @at-root .right0 {
+    right: 0 !important;
+  }
+  @at-root .top_auto {
+    top: auto !important;
+  }
+  @at-root .top0 {
+    top: 0 !important;
+  }
+}
+
+//////////////// margin
+.margin {
+  .margin-top {
+    // @at-root .mt5 { margin-top:5rem / $baseFontSize; }
+    @at-root .mt-10 {
+      margin-top: -10rem / $baseFontSize !important;
+    }
+    @at-root .mt10 {
+      margin-top: 10rem / $baseFontSize !important;
+    }
+    @at-root .mt20 {
+      margin-top: 20rem / $baseFontSize !important;
+    }
+    @at-root .mt30 {
+      margin-top: 30rem / $baseFontSize !important;
+    }
+    @at-root .mt40 {
+      margin-top: 40rem / $baseFontSize !important;
+    }
+    @at-root .mt180 {
+      margin-top: 180rem / $baseFontSize !important;
+    }
+    //@at-root .mt20 { margin-top: 20rem / $baseFontSize; }
+  }
+
+  .margin-left {
+    @at-root .ml10 {
+      margin-left: 10rem / $baseFontSize !important;
+    }
+  }
+
+  .margin-bottom {
+    @at-root .mb0 {
+      margin-bottom: 0 !important;
+    }
+    @at-root .mb10 {
+      margin-bottom: 10rem / $baseFontSize !important;
+    }
+    @at-root .mb20 {
+      margin-bottom: 20rem / $baseFontSize !important;
+    }
+    //@at-root .mb30 { margin-bottom: 30rem / $baseFontSize; }
+  }
+  //左右间距
+  .margin-lr {
+    //@at-root .mlr5 {
+    //  margin:{
+    //    left: 5rem / $baseFontSize;
+    //    right: 5rem / $baseFontSize;
+    //  }
+    //}
+  }
+  //上下间距
+  .margin-tb {
+     @at-root .mtb10 {
+     margin:{
+       top: 10rem / $baseFontSize !important;
+       bottom: 10rem / $baseFontSize !important;
+     }
+    }
+    //@at-root .mtb20 {
+    //  margin:{
+    //    top: 20rem / $baseFontSize !important;
+    //    bottom: 20rem / $baseFontSize !important;
+    //  }
+    //}
+  }
+}
+
+////////////////// padding
+.padding {
+  @at-root .p10 {
+    padding: 10rem / $baseFontSize !important;
+  }
+  @at-root .pText {
+    padding: 20rem / $baseFontSize 10rem / $baseFontSize !important;
+  }
+
+  .padding-top {
+    @at-root .pt0 {
+      padding-top: 0 !important;
+    }
+    @at-root .pt10 {
+      padding-top: 10rem / $baseFontSize !important;
+    }
+    @at-root .pt20 {
+      padding-top: 20rem / $baseFontSize !important;
+    }
+    // @at-root .pt50 { padding-top: 50rem / $baseFontSize !important; }
+  }
+
+  .padding-left {
+    @at-root .pl0 {
+      padding-left: 0 !important;
+    }
+    @at-root .pl10 {
+      padding-left: 10rem / $baseFontSize !important;
+    }
+    @at-root .pl20 {
+      padding-left: 20rem / $baseFontSize !important;
+    }
+    @at-root .pl40 {
+      padding-left: 40rem / $baseFontSize !important;
+    }
+  }
+
+  .padding-right {
+    @at-root .pr10 {
+      padding-right: 10rem / $baseFontSize !important;
+    }
+  }
+
+  .padding-bottom {
+    @at-root .pb0 {
+      padding-bottom: 0 !important;
+    }
+    @at-root .pb10 {
+      padding-bottom: 10rem / $baseFontSize !important;
+    }
+    @at-root .pb20 {
+      padding-bottom: 20rem / $baseFontSize !important;
+    }
+  }
+  //左右间距
+  .padding-lr {
+    @at-root .plrEmpty {
+      padding: {
+        left: $emptyWidth;
+        right: $emptyWidth;
+      }
+    }
+    @at-root .plr5 {
+      padding: {
+        left: 5rem / $baseFontSize;
+        right: 5rem / $baseFontSize;
+      }
+    }
+    @at-root .plr30 {
+      padding: {
+        left: 30rem / $baseFontSize !important;
+        right: 30rem / $baseFontSize !important;
+      }
+    }
+  }
+  //上下间距
+  .padding-tb {
+    @at-root .ptb10 {
+      padding: {
+        top: 10rem / $baseFontSize;
+        bottom: 10rem / $baseFontSize;
+      }
+    }
+  }
+}
+
+// flex布局类
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.align-item {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.flex-v {
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}

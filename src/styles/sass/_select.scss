@@ -1,0 +1,45 @@
+$weuiCellHeight:28rem / $baseFontSize;
+$weuiCellGapH:5rem / $baseFontSize;
+
+.fy_cell_select {
+    position: relative;
+    padding: 0;
+
+    .arrow{
+        position: absolute;
+        right:$weuiCellGapH;
+        top:38%;
+        color:$iconColor;
+    }
+
+    .fy_select {
+        padding-right: 25rem / $baseFontSize;
+        color:#666;
+        font-family: "Microsoft YaHei"
+    }
+    .fy_cell_bd{
+        &:after{
+            content: " ";
+
+            position: absolute;
+            top: 50%;
+            right: $weuiCellGapH;
+            margin-top: -3rem / $baseFontSize;
+        }
+    }
+
+}
+
+.fy_select {
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    width: 100%;
+    font-size: inherit;
+    height: $weuiCellHeight;
+    line-height: $weuiCellHeight;
+    position: relative;
+    z-index: 1;
+    padding-left: $weuiCellGapH;
+}

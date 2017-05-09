@@ -1,0 +1,174 @@
+.weui_search_bar {
+    position: relative;
+    padding: 8rem / $baseFontSize 10rem / $baseFontSize;
+    display: flex;
+    box-sizing: border-box;
+    z-index: 2;
+    background:#fff;
+
+    &:before,&:after{
+    	content: " ";
+	    position: absolute;
+	    left: 0;
+	    width: 100%;
+	    height: 1px;
+	    color: #C7C7C7;
+	    -webkit-transform: scaleY(0.5);
+	    transform: scaleY(0.5);
+    }
+    &:before{
+    	top: 0;
+    	-webkit-transform-origin: 0 0;
+    	transform-origin: 0 0;
+
+    }
+    &:after{
+    	bottom: 0;
+    	-webkit-transform-origin: 0 100%;
+    	transform-origin: 0 100%;
+    }
+    &.weui_search_focusing{
+        .weui_search_cancel{
+            display: block;
+        }
+        .weui_search_text{
+            display: none;
+        }
+    }
+
+
+    @at-root .weui_search_outer {
+        position: relative;
+        flex: auto;
+        line-height: 25rem / $baseFontSize;
+        background-color: #F6F6F6;
+        border: 1px solid #E5E5E5;
+        border-radius:2rem / $baseFontSize;
+
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top:0;
+            width: 200%;
+            transform: scale(.5);
+            transform-origin: 0 0;
+            border-radius: 5rem / $baseFontSize;
+            box-sizing: border-box;
+            background: #FFFFFF;
+        }
+    }
+
+    @at-root .weui_search_inner {
+        position: relative;
+        padding-left: 30rem / $baseFontSize;
+        padding-right: 30rem / $baseFontSize;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1;
+        .weui_search_input {
+            padding: 4rem / $baseFontSize 0;
+            width: 100%;
+            height: 20rem / $baseFontSize;
+            border: 0;
+            font-size: 14rem / $baseFontSize;
+            line-height: 20rem / $baseFontSize;
+            box-sizing: content-box;
+            background: transparent;
+            &:focus {
+                outline: none;
+            }
+        }
+        .ion-ios-search{
+            position: absolute;
+            left: 10rem / $baseFontSize;
+            //top: -2rem / $baseFontSize;
+            line-height: 28rem / $baseFontSize;
+        }
+        .ion-ios-close {
+            position: absolute;
+            top: 2rem / $baseFontSize;
+            right: 0;
+            padding: 0 10rem / $baseFontSize;
+            line-height: 28rem / $baseFontSize;
+            color:$iconColor;
+        }
+    }
+
+    @at-root .weui_search_text {
+        position: absolute;
+        top: 1rem / $baseFontSize;
+        right: 1rem / $baseFontSize;
+        left: 1rem / $baseFontSize;
+        bottom: 1rem / $baseFontSize;
+        z-index: 2;
+        border-radius: 1rem / $baseFontSize;
+        text-align: center;
+        color: #9B9B9B;
+        background: #F6F6F6;
+        span {
+            display: inline-block;
+            font-size: 14rem / $baseFontSize;
+            vertical-align: middle;
+        }
+        .ion-ios-search {
+            margin-right: 5rem / $baseFontSize;
+            vertical-align: middle;
+            font-size: 16rem / $baseFontSize;
+            //line-height: 28rem / $baseFontSize;
+        }
+    }
+
+    @at-root .weui_search_cancel {
+        display: none;
+        margin-left: 10rem / $baseFontSize;
+        line-height: 28rem / $baseFontSize;
+        color: #09BB07;
+        min-width: 30rem / $baseFontSize;
+    }
+     @at-root .weui_search_input:not(:valid) ~ .ion-ios-close {
+        display: none;
+    }
+
+    //氓鹿虏忙沤鈥癷nput[search]茅禄藴猫庐陇莽拧鈥瀋lear button
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        display: none;
+    }
+
+    .ion-ios-search{
+        color: #B2B2B2;
+        font-size: 14rem / $baseFontSize;
+    }
+}
+
+.search_has_classify{
+    background:#fff;
+    padding-left:$emptyWidth;
+
+    .fy_cell_select{
+        background:#fff;
+        float: left;
+        padding: 8rem / $baseFontSize 0;
+        width:30%;
+    }
+
+    &:after{
+        @include clear;
+        content:'';
+    }
+
+    .weui_search_bar{
+        float: right;
+        width:70%;
+    }
+}
+
+
+
+
+
+

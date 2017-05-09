@@ -1,0 +1,74 @@
+//* time:2016-10-28
+//* author:Fiona
+//*description:base css of app
+
+@import 'sass/variable';
+
+/* * * * * * * * * * *   css reset   * * * * * * * * * * */
+@import 'sass/reset';
+
+/* * * * * * * * * * *   base css   * * * * * * * * * * */
+@import 'sass/base';
+
+/* * * * * * * * * * *   flex   * * * * * * * * * * */
+@import 'sass/flex';
+
+/* * * * * * * * * * *   form css   * * * * * * * * * * */
+@import 'sass/form';
+
+//* * * * * * * * * * *   button   * * * * * * * * * * */
+@import "sass/button";
+
+//* time:2016-10-28
+//* author:Fiona
+//*description:global css of app
+
+//* * * * * * * * * * *   table   * * * * * * * * * * */
+@import "sass/table";
+
+//* * * * * * * * * * *   popup   * * * * * * * * * * */
+@import "sass/popup";
+
+//* * * * * * * * * * *   search   * * * * * * * * * * */
+@import "sass/searchbar";
+
+//* * * * * * * * * * *   select   * * * * * * * * * * */
+@import "sass/select";
+
+//* * * * * * * * * * *   items   * * * * * * * * * * */
+@import "sass/items";
+
+//* * * * * * * * * * *   record   * * * * * * * * * * */
+@import "sass/recordItems";
+
+//* * * * * * * * * * *   article   * * * * * * * * * * */
+@import "sass/article";
+
+
+.no_data{
+	padding:50rem / $baseFontSize 0 !important;
+	text-align:center;
+	font-size:16rem / $baseFontSize !important;
+	color:#aaa !important;
+
+	&>.ion-ios-paper-outline{
+		font-size: 60rem / $baseFontSize!important;
+		color:$iconColor!important;
+	}
+}
+.no_permission{
+	padding:50rem / $baseFontSize 0 !important;
+	.ion{
+		font-size: 50rem / $baseFontSize;
+		color:$iconColor;
+	}
+	p{
+		margin-top: 10rem / $baseFontSize;
+	}
+
+}
+[v-cloak] {
+  display: none;
+}
+
+

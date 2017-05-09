@@ -1,0 +1,62 @@
+//* * * * * * * * * * *  CSS reset  * * * * * * * * * * */
+.css_reset
+{
+    @at-root body,
+    div,
+    dl, dt, dd,
+    ul, ol, li,
+    h1, h2, h3, h4, h5, h6,
+    pre,
+    form, fieldset, input, textarea,
+    p,blockquote,th,td
+    {
+        margin: 0;
+        padding: 0;
+    }
+    @at-root a
+    {
+        text-decoration: none;
+    }
+    @at-root table
+    {
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+    @at-root fieldset, img
+    {
+        border: none;
+    }
+    @at-root ol, ul, li
+    {
+        list-style: none;
+    }
+    //caption { text-align: left; }
+    @at-root q:before, q:after
+    {
+        content: '';
+    }
+    @at-root abbr, acronym
+    {
+        border: none;
+    }
+    //去掉ios系统中元素被触摸时产生的半透明灰色遮罩
+    //去掉部分android系统中元素被点击时产生的边框
+    @at-root a, img, button, input, textarea
+    {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        // -webkit-user-modify:read-write-plaintext-only;//-webkit-user-modify有个副作用，就是输入法不再能够输入多个字符
+    }
+    //去掉winphone系统a、input标签被点击时产生的半透明灰色背景
+    @at-root a,input, textarea
+    {
+        // -webkit-appearance: none;
+    }
+}
+i{
+    font-style: normal;
+}
+
+/* *
+{
+    box-sizing: border-box;
+} */

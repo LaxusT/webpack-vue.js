@@ -1,0 +1,29 @@
+
+.article{
+	img{
+		width:100%;
+		margin-bottom:10rem / $baseFontSize;
+	}
+	h1{
+		padding: 0 20rem / $baseFontSize;
+		@include articleTit;
+	}
+	.release{
+		padding: 0 20rem / $baseFontSize;
+		@include articleRelease;
+
+		span + span{
+			margin-left: 20rem / $baseFontSize;
+		}
+	}
+	video{width:100%}
+	.article_con{
+		color: $mainColor;
+		line-height:180%;
+		padding: 0 20rem / $baseFontSize;
+	}
+	p{
+		margin-top: 10rem / $baseFontSize;
+		font-size:14rem / $baseFontSize;
+	}
+}

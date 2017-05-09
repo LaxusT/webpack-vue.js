@@ -1,0 +1,268 @@
+input[type='text'], input[type='date'],  input[type='number'], textarea , select{
+  // -webkit-appearance:none;
+  outline: none;
+  background: #fff;
+}
+.formline input[type="date"], .formline input[type="time"]{
+  border: none;
+  // -webkit-appearance:none;
+  background: none;
+  padding: 10rem / $baseFontSize;
+  padding-left: 0;
+  outline-width: 2rem / $baseFontSize; 
+  background: #fff;
+  font-family: 'Microsoft YaHei', Arial !important;
+}
+select{
+  border: none;
+  position: relative;
+  font-size: 14rem / $baseFontSize;
+  &:before{
+    position: absolute;
+    right: 0;
+    top: 10%;
+    content: "";
+  }
+}
+.form-table{
+  width: 100%;
+  line-height: 24rem / $baseFontSize;
+  text-align:center;
+
+  tr,td,th{
+    border: 1px solid $borColor;
+    padding: 2rem / $baseFontSize;
+  }
+}
+
+.form-group{
+  margin-bottom: 10rem / $baseFontSize;
+  position: relative;
+  .cut_off {
+    border-bottom:solid 1px #fff;
+    box-shadow:2px 2px 2px #ccc;
+    margin-top:5px;
+  }
+  .text_center {
+    line-height: 24rem / $baseFontSize;
+  }
+
+  #province{
+    width: 40%;
+    .form-control{
+      width: 100%;
+    }
+  }
+
+  #city{
+    width: 40%;
+    .form-control{
+      width: 100%;
+    }
+  }
+
+  &.form-flabel{
+    label{
+      float: left;
+      margin-top: 12rem / $baseFontSize;
+      color: #666;
+    }
+  }
+
+  .form-dategroup{
+    display: inline-block;
+    width: 60%;
+      .form-control{
+        width: 40%;
+        margin-right: 10rem / $baseFontSize;
+        margin-top: 10rem / $baseFontSize;
+        float: left;
+      }
+  }
+
+  &:after{
+    content: '';
+    @include clear;
+  }
+  &.form-check-full{
+    label{
+          text-align: left;
+          float: left;
+          width: inherit;
+          padding-left: 4rem / $baseFontSize;
+          color: #666;
+    }
+    .checkyw{
+          text-align: left;
+          padding-left: 0px;
+    }
+
+    .form-control{
+      margin-top: 10rem / $baseFontSize;
+    }
+
+  }
+
+}
+
+.form-control{
+    display: inline-block;
+    width:100%;
+    padding: 6px 12px;
+    box-sizing:border-box;
+    font-size: 1.4rem;
+    font-family: 'Microsoft YaHei', Arial !important;
+    line-height: 1.42857143;
+    color: #555;
+    word-wrap: break-word;
+}
+
+textarea {
+   &.form-control{
+      height: auto;
+   }
+}
+
+input {
+  &.form-control{
+      height: 34px;
+  }
+}
+
+
+.form-cont{
+
+  label{
+    display: inline-block;
+    color: #666;
+  }
+
+  //基本的提示大项文字样式
+  .form-title{
+      background: #f2f2f2;
+      padding: 5rem / $baseFontSize;
+      line-height: 20rem / $baseFontSize;
+      height: 20rem / $baseFontSize;
+      p{
+        display: inline-block;
+        padding-left: 15rem / $baseFontSize;
+        border-bottom: 1px solid $borColor;
+      }
+      i{
+        display: inline-block;
+        font-size: 20rem / $baseFontSize;
+        margin-right: 5rem / $baseFontSize;
+        color: #178743;
+      }
+  }
+
+  //个人基本信息样式
+  .form-basetop{
+    background: #fff;
+    padding: 8rem / $baseFontSize 0; 
+    .form-half{
+      padding:5rem / $baseFontSize;
+      p{
+        padding-left: 15rem / $baseFontSize;
+        display: inline-block;
+        width: 22%;
+        color: #666;
+      }
+      span {
+        color: #555;
+      }
+    }
+  }
+  
+
+  // 基本的input样式
+  .form-baseinput{
+    background: #fff;
+    border-top: 1px solid $borColor;
+
+    .form-group{
+      position: relative;
+      padding: 5rem / $baseFontSize 0;
+      padding-left: 10rem / $baseFontSize;
+      border-bottom: 1px solid $borColor;
+      margin-bottom: 0;
+      box-sizing:border-box;
+
+      label{
+        padding-left: 10rem / $baseFontSize;
+        color: #666;
+        // vertical-align: top;
+      }
+      .form-control{
+        border: none;
+
+      }
+    }
+  }
+  
+
+  //基本的textarea样式
+  .form-textarea{
+      textarea.form-control{
+        border: 1px solid $borColor;
+        padding: 10rem / $baseFontSize 20rem / $baseFontSize;
+      }
+      .form-group{
+        margin-bottom: 0;
+        position: relative;
+      }
+  }
+
+  .form-group{
+    margin-bottom: 0;
+    position: relative;
+    .form-table{
+        margin: 10rem / $baseFontSize 0;
+        td{
+          background: #fff;
+        }
+    }
+  }
+
+  .form-date{
+    label{
+      float: left;
+      padding-top: 8rem / $baseFontSize;
+      color: #666;
+    }
+    input[type='date']{
+      margin-top: 7rem / $baseFontSize;
+    }
+  }
+
+
+}
+
+.formline{
+
+    label{
+        padding-top: 7px;
+        margin-bottom: 0;
+        width: 22%;
+        display: inline-block;
+        color: #666;
+    }
+
+    .form-control{
+        display: inline-block;
+        height: 34px;
+        width:70%;
+        padding: 0;
+        box-sizing:border-box;
+        font-size: 1.4rem;
+        font-family: 'Microsoft YaHei', Arial !important;
+        line-height: 1.42857143;
+        color: #555;
+        & + span {
+          position: absolute;
+          display: inline-block;
+          line-height: 34px;
+          right: 15rem / $baseFontSize;
+        }
+    }
+}

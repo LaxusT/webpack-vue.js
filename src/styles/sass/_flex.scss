@@ -1,0 +1,20 @@
+.flex_grid{
+	@include flex;
+
+	&.grid_cell{
+		@include flex1;
+
+		&.u_full{
+			flex:0 0 100%;
+		}
+		&.u_lof2{
+			flex:0 0 50%;
+		}
+		&.u_lof3{
+			flex:0 0 33.3333%;
+		}
+		&.u_lof4{
+			flex:0 0 25%;
+		}
+	}
+}

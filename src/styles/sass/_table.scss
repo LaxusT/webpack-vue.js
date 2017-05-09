@@ -1,0 +1,8 @@
+.table{
+	width:100%;
+
+	th,td{
+		border:1px solid $borColor;
+		padding:5rem / $baseFontSize 5rem / $baseFontSize;
+	}
+}

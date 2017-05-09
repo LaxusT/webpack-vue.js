@@ -1,0 +1,21 @@
+//button
+.btn{
+	padding:3rem / $baseFontSize 12rem / $baseFontSize;
+	border-radius: 30rem / $baseFontSize;
+	font-size: 14rem / $baseFontSize;
+
+	& + .btn{
+		margin-left: 10rem / $baseFontSize;
+	}
+
+
+	&.default{
+		border:1px solid $popBorColor;
+	}
+	&.blue{
+		border:1px solid $blueBor;
+		color:$blueBor;
+	}
+
+
+}

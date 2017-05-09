@@ -1,0 +1,47 @@
+
+.blackcover{
+	position: fixed;
+	width:100%;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background:rgba(0,0,0,.4);
+}
+.pop_up{
+	position: absolute;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	z-index:9999;
+
+	.pop{
+		position: fixed;
+		top:50%;
+		left:50%;
+		@include translate50;
+		min-width:30%;
+		background:#fff;
+		padding:15rem / $baseFontSize;
+		border-radius:4px;
+
+
+	}
+
+	.opt_close{
+		position: absolute;
+		right:-10rem / $baseFontSize;
+		top:-10rem / $baseFontSize;
+		width:20rem / $baseFontSize;
+		height:20rem / $baseFontSize;
+		text-align:center;
+		line-height:20rem / $baseFontSize;
+		font-size:20rem / $baseFontSize;
+	}
+
+	.main{
+
+
+	}
+}

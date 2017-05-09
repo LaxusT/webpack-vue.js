@@ -1,0 +1,141 @@
+//违章记录
+@mixin mark($borSize,$bgColor){
+	border:$borSize / $baseFontSize solid transparent;
+	border-top:$borSize / $baseFontSize solid $bgColor;
+	border-left:$borSize / $baseFontSize solid $bgColor;
+}
+
+.record_list{
+	padding:0 $emptyWidth;
+
+	li{
+		background: #fff;
+		border: 1px solid $borColor;
+		margin-top: 10rem / $baseFontSize;
+
+		.title{
+		    position: relative;
+		    overflow: hidden;
+		    height: 54rem / $baseFontSize;
+		    line-height: 54rem / $baseFontSize;
+		    padding-left: 30rem / $baseFontSize;
+		    font-size: 16rem / $baseFontSize;
+
+		    &:before,&:after{
+	    		content:'';
+	    		position: absolute;
+	    		z-index: 1;
+	    		left:0;
+	    		top:0;
+	    	}
+	    	b{
+	    		font-size: 24rem / $baseFontSize;
+	    		padding-left: 3rem / $baseFontSize;
+	    	}
+	    	&.green{
+		    	$bg_green:#009e4c;
+		    	background: lighten($bg_green,65%);
+
+		    	&:before{
+		    		@include mark(22rem,$bg_green)
+		    	}
+		    	&:after{
+		    		@include mark(8rem,lighten($bg_green,65%))
+		    	}
+		    	b{
+		    		color:$bg_green;
+		    	}
+		    }
+
+		    &.red{
+		    	$bg_red:#D5230F;
+		    	background: lighten($bg_red,52%);
+
+		    	&:before{
+		    		@include mark(22rem,$bg_red)
+		    	}
+		    	&:after{
+		    		@include mark(8rem,lighten($bg_red,52%))
+		    	}
+		    	b{
+		    		color:$bg_red;
+		    	}
+		    }
+		    &.orange{
+		    	$bg_orange:#FF8C31;
+		    	background: lighten($bg_orange,37%);
+
+		    	&:before{
+		    		@include mark(22rem,$bg_orange)
+		    	}
+		    	&:after{
+		    		@include mark(8rem,lighten($bg_orange,37%))
+		    	}
+		    	b{
+		    		color:$bg_orange;
+		    	}
+
+		    }
+		    &>i{
+		    	position: absolute;
+		    	top:-12rem / $baseFontSize;
+		    	left:3rem / $baseFontSize;
+		    	z-index: 3;
+		    	font-style: normal;
+		    	font-size: 10rem / $baseFontSize;
+		    	color:#fff;
+		    	@include rotate(-45deg);
+		    }
+		    .time{
+		    	color:$mainColor;
+		    }
+		    .score{
+		    	position: absolute;
+		    	right:15rem / $baseFontSize;
+		    	top:0;
+		    }
+		}
+		.con{
+			position: relative;
+			padding: 18rem / $baseFontSize;
+			line-height:150%;
+			font-size: 16rem / $baseFontSize;
+
+			&>p{
+				&>b{
+					font-weight: normal;
+					color:#666;
+
+					&+span{
+						margin-left: 2rem / $baseFontSize;
+					}
+				}
+				&+p{
+					margin-top: 5rem / $baseFontSize;
+				}
+			}
+
+			&:before,&:after{
+				content:'';
+				position: absolute;
+				right: -1px;
+				bottom: -1px;
+				width:0;
+				height: 0;
+			}
+
+			&:before{
+				border:10rem / $baseFontSize solid transparent;
+				border-bottom:10rem / $baseFontSize solid $mainBgColor;
+				border-right:10rem / $baseFontSize solid $mainBgColor;
+
+			}
+			&:after{
+				border:10rem / $baseFontSize solid transparent;
+				border-top:10rem / $baseFontSize solid #dfe4de;
+				border-left:10rem / $baseFontSize solid #dfe4de;
+
+			}
+		}
+	}
+}
