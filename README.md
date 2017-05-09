@@ -1,4 +1,4 @@
-# castrol_wechat_m
+# webpack + vue.js
 
 > A Vue.js project
 
@@ -8,14 +8,13 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:5555
 npm run dev
 
-# build for production with minification
+# build for production all projects
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# build for production one projects
+npm run build:test1
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

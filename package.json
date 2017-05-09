@@ -7,9 +7,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
+    "build": "cross-env STAGE=production TARGET=test1 node build/build.js && cross-env STAGE=production TARGET=test2 node build/build.js",
     "build:test1": "cross-env STAGE=production TARGET=test1 node build/build.js",
-    "build:test1-dev": "cross-env STAGE=development TARGET=test1 node build/build.js"
+    "build:test1-dev": "cross-env STAGE=development TARGET=test1 node build/build.js",
+    "build:test2": "cross-env STAGE=production TARGET=test1 node build/build.js",
+    "build:test2-dev": "cross-env STAGE=development TARGET=test1 node build/build.js"
   },
   "dependencies": {
     "cross-env": "^4.0.0",
